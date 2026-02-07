@@ -1,0 +1,14 @@
+<div class="discount-badge" style="
+  display: inline-block;
+  background-color: {{ block.settings.colour | border_lightness: 50 }};
+  color: {{ block.settings.colour }};
+  border: 1px solid {{ block.settings.colour }};
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+">
+  <span style="margin-right: 5px;">🏷️</span>
+  Buy 2, Get {{ block.settings.discount_percent }}% Off
+</div>

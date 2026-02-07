@@ -1,0 +1,21 @@
+<div class="product-promo-widget" style="color: {{ block.settings.colour }}; font-weight: bold; margin: 10px 0; display: flex; align-items: center; gap: 5px;">
+  {%- if block.settings.show_icon -%}
+    <span style="font-size: 1.2em;">🏷️</span>
+  {%- endif -%}
+  
+  <span>
+    {{ 'ratings.home.buy_2_text' | t }}
+  </span>
+</div>
+
+{% schema %}
+{
+  "name": "Buy 2 Discount Widget",
+  "target": "section",
+  "settings": [
+    { "type": "product", "id": "product", "label": "Product", "autofill": true },
+    { "type": "color", "id": "colour", "label": "Text Colour", "default": "#ff0000" },
+    { "type": "checkbox", "id": "show_icon", "label": "Show Tag Icon", "default": true }
+  ]
+}
+{% endschema %}
